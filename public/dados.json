@@ -1,0 +1,7 @@
+{
+    "vagas":[
+        {"tipo":"CARRO","quantidade":10},
+        {"tipo":"MOTO","quantidade":6}
+    ],
+    "valorHora": 10
+}
