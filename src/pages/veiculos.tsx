@@ -198,7 +198,7 @@ function Veiculos() {
             <h1 className="text-2xl font-bold">Gestão de Veículos</h1>
             <nav>
                 <>
-                    <Link to="/">
+                    <Link to="/estacionamento-web-2025/">
                         <Button variant="outline" size="lg">Home</Button>
                     </Link>
                     <Link to="/veiculos">

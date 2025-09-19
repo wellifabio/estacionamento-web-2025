@@ -192,7 +192,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={
+      <Route path="/estacionamento-web-2025/" element={
         <>
           <Dialog open={openLogin} onOpenChange={setOpenLogin}>
             <DialogContent>
@@ -317,7 +317,7 @@ function App() {
                 <Button variant="outline" size="lg" onClick={openDialogLogin}>Login</Button>
               ) : (
                 <>
-                  <Link to="/">
+                  <Link to="./">
                     <Button variant="outline" size="lg">Home</Button>
                   </Link>
                   <Link to="/veiculos">
@@ -336,7 +336,7 @@ function App() {
             {estadias.map((estadia) => (
               <Card key={estadia.id} className="max-w-xs flex flex-row items-center p-4 m-2">
                 <div>
-                  <img src={estadia.automovel ? estadia.automovel.tipo === "CARRO" ? "/assets/logo.png" : "/assets/moto.webp" : "/assets/x.webp"} alt={estadia.automovel ? estadia.automovel.tipo : "Excluído"} className="w-24 h-auto mr-4" />
+                  <img src={estadia.automovel ? estadia.automovel.tipo === "CARRO" ? "./assets/logo.png" : "./assets/moto.webp" : "./assets/x.webp"} alt={estadia.automovel ? estadia.automovel.tipo : "Excluído"} className="w-24 h-auto mr-4" />
                 </div>
                 <div className="text-left">
                   <h3 className="text-xl font-bold mb-2">{estadia.automovel ? estadia.automovel.placa : "EXCLUÍDO"}</h3>
