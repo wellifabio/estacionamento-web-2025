@@ -10,7 +10,7 @@ import './App.css'
 import Report from './pages/relatorios'
 import Veiculos from './pages/veiculos'
 
-const uri = "dados.json"
+const uri = "./dados.json"
 const api = "https://estacionamentoapi2025.vercel.app"
 
 
