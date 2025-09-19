@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button"
 import '../App.css'
 import { Link } from 'react-router-dom'
 
-const api = "https://estacionamentoapi2025.vercel.app"
+const api = import.meta.env.VITE_API || "http://localhost:3000"
 
 
 function Report() {
