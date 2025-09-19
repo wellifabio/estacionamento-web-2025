@@ -17,7 +17,7 @@ export async function login(email: string, senha: string): Promise<string | null
 
 export function logout() {
   localStorage.removeItem('token');
-  window.location.href = "/"
+  window.location.href = "/estacionamento-web-2025/"
 }
 
 export async function isAuthenticated(): Promise<boolean> {

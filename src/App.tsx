@@ -339,7 +339,7 @@ function App() {
                   <img src={estadia.automovel ? estadia.automovel.tipo === "CARRO" ? "./assets/logo.png" : "./assets/moto.webp" : "./assets/x.webp"} alt={estadia.automovel ? estadia.automovel.tipo : "Excluído"} className="w-24 h-auto mr-4" />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-xl font-bold mb-2">{estadia.automovel ? estadia.automovel.placa : "EXCLUÍDO"}</h3>
+                  <h3 className="text-xl font-bold mb-2">{isAuth ? estadia.automovel ? estadia.automovel.placa : "EXCLUÍDO" : "PLACA"}</h3>
                   <p>Entrada: {new Date(estadia.entrada).toLocaleString('pt-BR')}</p>
                   <p>Valor da hora: R$ {estadia.valorHora.toFixed(2)}</p>
                   {isAuth ? <p><Button variant="outline" size="lg" onClick={() => excluir(estadia.id)}>Cancelar</Button><Button variant="outline" size="lg" onClick={() => openDialogSaida(estadia.id)}>Saída</Button></p> : ""}
