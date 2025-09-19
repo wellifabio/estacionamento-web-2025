@@ -1,4 +1,5 @@
-button, input[type="submit"] {
+button,
+input[type="submit"] {
   cursor: pointer;
   margin: 0.1rem;
   background-color: rgba(0, 0, 0, 0.8);
@@ -9,7 +10,7 @@ div {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-header{
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,6 +18,32 @@ header{
   width: 100vw;
 }
 
-p button{
+p button {
   padding: 15px;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+  header nav {
+    text-align: center;
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    content: attr(data-label);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
 }

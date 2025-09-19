@@ -100,6 +100,7 @@ function Veiculos() {
                 if (response.status === 202) {
                     setAlertMessage("Veículo atualizado com sucesso.");
                     obterVeiculos()
+                    setOpenDialog(false)
                 }
             } catch (error) {
                 setAlertMessage("Erro ao atualizar veículo.");
@@ -110,6 +111,7 @@ function Veiculos() {
                     if (response.status === 201) {
                         setAlertMessage("Veículo cadastrado com sucesso.");
                         obterVeiculos()
+                        setOpenDialog(false)
                     }
                 }).catch((error) => {
                     setAlertMessage(`Erro ao cadastrar veículo.`);
@@ -233,14 +235,14 @@ function Veiculos() {
                 <TableBody>
                     {veiculos.map((veiculo) => (
                         <TableRow key={veiculo.placa}>
-                            <TableCell>{veiculo.tipo}</TableCell>
-                            <TableCell>{veiculo.proprietario}</TableCell>
-                            <TableCell>{veiculo.telefone}</TableCell>
-                            <TableCell>{veiculo.placa}</TableCell>
-                            <TableCell>{veiculo.modelo}</TableCell>
-                            <TableCell>{veiculo.marca}</TableCell>
-                            <TableCell>{veiculo.cor}</TableCell>
-                            <TableCell>{veiculo.ano}</TableCell>
+                            <TableCell data-label="TIPO">{veiculo.tipo}</TableCell>
+                            <TableCell data-label="PROPRIETARIO">{veiculo.proprietario}</TableCell>
+                            <TableCell data-label="TELEFONE">{veiculo.telefone}</TableCell>
+                            <TableCell data-label="PLACA">{veiculo.placa}</TableCell>
+                            <TableCell data-label="MODELO">{veiculo.modelo}</TableCell>
+                            <TableCell data-label="MARCA">{veiculo.marca}</TableCell>
+                            <TableCell data-label="COR">{veiculo.cor}</TableCell>
+                            <TableCell data-label="ANO">{veiculo.ano}</TableCell>
                             <TableCell>
                                 <span style={{ display: 'flex', gap: '0.5rem' }}>
                                     <Button variant="outline" size="sm" onClick={() => editarVeiculo(veiculo.placa)}>Editar</Button>

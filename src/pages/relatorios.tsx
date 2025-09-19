@@ -94,13 +94,13 @@ function Report() {
                 <TableBody>
                     {estadiasFiltradas.map((estadia) => (
                         <TableRow key={estadia.id}>
-                            <TableCell>{estadia.id}</TableCell>
-                            <TableCell>{estadia.placa}</TableCell>
-                            <TableCell>{new Date(estadia.entrada).toLocaleString()}</TableCell>
-                            <TableCell>{new Date(estadia.saida).toLocaleString()}</TableCell>
-                            <TableCell>R$ {estadia.valorHora.toFixed(2)}</TableCell>
-                            <TableCell>R$ {(((new Date(estadia.saida).getTime() - new Date(estadia.entrada).getTime()) / 3600000) * estadia.valorHora).toFixed(2)}</TableCell>
-                            <TableCell>R$ {estadia.valorTotal ? estadia.valorTotal.toFixed(2) : 0}</TableCell>
+                            <TableCell data-label="ID">{estadia.id}</TableCell>
+                            <TableCell data-label="VEICULO">{estadia.placa}</TableCell>
+                            <TableCell data-label="HORA DE ENTRADA">{new Date(estadia.entrada).toLocaleString()}</TableCell>
+                            <TableCell data-label="HORA DE SAIDA">{new Date(estadia.saida).toLocaleString()}</TableCell>
+                            <TableCell data-label="VALOR DA HORA (R$)">R$ {estadia.valorHora.toFixed(2)}</TableCell>
+                            <TableCell data-label="VALOR CALCULADO (R$)">R$ {(((new Date(estadia.saida).getTime() - new Date(estadia.entrada).getTime()) / 3600000) * estadia.valorHora).toFixed(2)}</TableCell>
+                            <TableCell data-label="VALOR COBRADO (R$)">R$ {estadia.valorTotal ? estadia.valorTotal.toFixed(2) : 0}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
