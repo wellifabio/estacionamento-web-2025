@@ -65,10 +65,10 @@ function Report() {
                     <Link to="/estacionamento-web-2025/">
                         <Button variant="outline" size="lg">Home</Button>
                     </Link>
-                    <Link to="/veiculos">
+                    <Link to="/estacionamento-web-2025/veiculos">
                         <Button variant="outline" size="lg">Veículos</Button>
                     </Link>
-                    <Link to="/report">
+                    <Link to="/estacionamento-web-2025/report">
                         <Button variant="outline" size="lg">Relatório</Button>
                     </Link>
                     <Button variant="outline" size="lg" onClick={handleLogout}>Logout</Button>
