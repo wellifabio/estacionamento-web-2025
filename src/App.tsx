@@ -10,8 +10,7 @@ import './App.css'
 import Report from './pages/relatorios'
 import Veiculos from './pages/veiculos'
 
-const uri = "./dados.json"
-const api = "https://estacionamentoapi2025.vercel.app"
+const api = import.meta.env.VITE_API || "http://localhost:3000"
 
 
 function getCurrentDateTimeLocal() {
@@ -37,10 +36,9 @@ function App() {
   const usuario = localStorage.getItem('token') ? JSON.parse(atob(localStorage.getItem('token').split('.')[1])).id : 0
 
   const obterDados = async () => {
-    const response = await axios.get(uri)
-    setCarros(response.data.vagas[0].quantidade)
-    setMotos(response.data.vagas[1].quantidade)
-    setValorHora(response.data.valorHora)
+    setCarros(import.meta.env.CARRO || 10)
+    setMotos(import.meta.env.MOTO || 6)
+    setValorHora(import.meta.env.VALOR_HORA || 10)
   }
 
   const obterEstadiasHoje = async () => {
