@@ -99,7 +99,7 @@ function Veiculos() {
                 const response = await axios.patch(`${api}/veiculos/${editData.placa}`, dados, header);
                 if (response.status === 202) {
                     setAlertMessage("Veículo atualizado com sucesso.");
-                    window.location.reload()
+                    obterVeiculos()
                 }
             } catch (error) {
                 setAlertMessage("Erro ao atualizar veículo.");
@@ -109,7 +109,7 @@ function Veiculos() {
                 .then((response) => {
                     if (response.status === 201) {
                         setAlertMessage("Veículo cadastrado com sucesso.");
-                        window.location.reload()
+                        obterVeiculos()
                     }
                 }).catch((error) => {
                     setAlertMessage(`Erro ao cadastrar veículo.`);
